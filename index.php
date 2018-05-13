@@ -11,7 +11,7 @@ $channelSecret = '69ab50c7bc8bffefbe9860cc7716d132';//Your Channel Secret
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
-$userId 	= $client->parseEvents()[0]['source']['userId'];
+$userId 	= $client->parseEventis()[0]['source']['userId'];
 $replyToken = $client->parseEvents()[0]['replyToken'];
 $message 	= $client->parseEvents()[0]['message'];
 $profil = $client->profil($userId);
@@ -34,7 +34,7 @@ if($message['type']=='sticker')
 }
 else
 $pesan=str_replace(" ", "%20", $pesan_datang);
-$key = '5a88fc50-9e55-4daa-819e-d457e9721a57'; //API SimSimi
+$key = '58fe309c-32a8-46de-9f93-0d44ba1aa63f'; //API SimSimi
 $url = 'http://sandbox.api.simsimi.com/request.p?key='.$key.'&lc=id&ft=1.0&text='.$pesan;
 $json_data = file_get_contents($url);
 $url=json_decode($json_data,1);
